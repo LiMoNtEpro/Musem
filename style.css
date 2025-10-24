@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1920px;
+    margin: 0 10px;
+}
+body{
+    font-family: Roboto;
+    min-height: 100vh;
+    max-width: 1920px;
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color: #030303;
+    color: white;
+}
+.header-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+}
+.nav-logo{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    width: 775px;
+}
+.nav-title{
+    font-family: Forum;
+    font-size: 28px;
+    letter-spacing: 5px;
+}
+.logo{
+    width: 49px;
+    height: 25px;
+}
+
+.main{
+    background-color: #030303;
+}
+
