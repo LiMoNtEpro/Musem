@@ -94,7 +94,6 @@ body{
     z-index: 1;
 }
 .welcome-title{
-    border: 1px solid red;
     color: white;
     font-family: Forum;
     letter-spacing: 5px;
@@ -139,6 +138,17 @@ body{
 .slider-image{
     width: 1000px;
     height: 750px;
+}
+.welcome-slider:after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: transparent;
+    background: linear-gradient(to right,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 50%);
 }
 
 
