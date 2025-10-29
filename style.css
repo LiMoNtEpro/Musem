@@ -8,7 +8,12 @@ html {
 }
 .container{
     max-width: 1440px;
-    margin: 0 10px;
+}
+.container-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 body{
     font-family: Roboto;
@@ -120,6 +125,9 @@ body{
     background-color: #710707;
     border-radius: 10px;
 }
+.welcome-link{
+    text-decoration: none;
+}
 .welcome-button-title{
     display: inline-block;
     color: white;
@@ -134,6 +142,7 @@ body{
     position:absolute;
     z-index: 0;
     right: 0;
+    height: 750px;
 }
 .slider-image{
     width: 1000px;
@@ -151,6 +160,64 @@ body{
     background: linear-gradient(to right,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 50%);
 }
 
+.visiting{
+    width: 1440px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top:40px;
+}
+.visiting-title{
+    font-family: Forum;
+    font-weight: 400;
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #9D8665;
+    margin:0;
+}
+.title-line{
+    border:none;
+    background-color: #710707;
+    height: 3px;
+    width: 1440px;
+    margin-bottom: 60px;
+}
+.visiting-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.visiting-item{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.virtual_tour-title{
+    font-family: Forum;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 1.5px 0;
+    margin-top: 20px;
+}
+.virtual_tour-subtitle{
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin:5px 0;
+}
+.visiting-item-line{
+    border:none;
+    background-color: #710707;
+    width: 300px;
+    height: 2px;
+    margin: 5px 0;
+}
 
 .footer{
     justify-self: flex-end;
