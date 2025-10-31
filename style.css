@@ -218,6 +218,68 @@ body{
     height: 2px;
     margin: 5px 0;
 }
+.explore{
+    position: relative;
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow-y: clip;
+}
+.explore-container{
+    width: 1440px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.explore-text{
+    width: 660px;
+}
+.explore-title{
+    font-family: Forum;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: white;
+}
+.explore-line{
+    border:none;
+    background-color: #710707;
+    height: 3px;
+}
+.explore-subtitle{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38.5px;
+    letter-spacing: 0%;
+    color: white;
+}
+.explore-span{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38.5px;
+    letter-spacing: 0%;
+    color: rgb(202, 170, 125);
+}
+.explore-slider{
+    width: 720px;
+    height: 700px;
+}
+.explore-image{
+    position: absolute;
+    left: 720px;
+    width: 720px;
+    height: 700px;
+}
+
+
+
 
 .footer{
     justify-self: flex-end;
