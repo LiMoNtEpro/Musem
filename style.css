@@ -389,10 +389,71 @@ body{
     width: 452px;
     height: 254px;
 }
+.gallery{
+    position: relative;
+    width: 1440px;
+    height: 2200PX;
+    overflow-y: clip;
+}
 .gallery-container{
+    width: 1440px;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.grid-container::after{
+    content:"";
+    position:absolute;
+    margin: 0;
+    width: 1440px;
+    height: 360px;
+    background: #000000;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    top:1765px;
+}
+.gallery-title{
+    font-family: Forum;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color:white;
+    margin:0;
+    margin-bottom: 75px;
+}
+.grid-container{
+    width: 1440px;
+    display:grid;
+    column-gap: 36px;
+    grid-template-columns: 1fr 1fr 1fr;
 
 }
-
+.gallery-grid-1{
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 24px;
+}
+.gallery-grid-2{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 24px;
+}
+.gallery-grid-3{
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 580px 464px 464px 348px;
+    gap: 24px;
+}
+.gallery-image{
+    width: 100%;
+}
 
 
 
