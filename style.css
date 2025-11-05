@@ -454,8 +454,150 @@ body{
 .gallery-image{
     width: 100%;
 }
-
-
+.tickets{
+    width: 1440px;
+    margin-top: 75px;
+}
+.tickets-container{
+    width: 1440px;
+    position:relative;
+}
+.tickets-title{
+    font-family: Forum;
+    font-weight: 400;
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #9D8665;
+    margin: 0;
+}
+.tickets-line{
+    width: 100%;
+    height: 3px;
+    background-color: #710707;
+    margin-top: 25px;
+    margin-bottom: 75px;
+}
+.tickets-image{
+    width: 720px;
+    height: 550px;
+}
+.tickets-buttons{
+    position: absolute;
+    height: fit-content;
+    top: 0;
+    left: 780px;
+}
+.tickets-buttons-title{
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.tickets-choice{
+    margin-bottom: 25px;
+}
+.choice-button{
+    height: 17px;
+    width: 17px;
+}
+.buttons-title{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+.tickets-amount{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    right: 0;
+    top:0;
+}
+.amount-title{
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: end;
+}
+.amount-subtitle{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin:0;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.amount-counter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: solid 3px black;
+    color: #000000;
+}
+.counter-minus{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.counter-plus{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.counter-number{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.amount-result{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+.tickets-buy-button{
+    position: absolute;
+    right: 0;
+    top:393px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 50px;
+    background-color: #000000;
+}
+.buy-button-text{
+    color: white;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    margin: 0;
+}
 
 
 
