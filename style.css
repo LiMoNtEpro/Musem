@@ -372,6 +372,14 @@ body{
 .video-link{
     width: 1440px;
     height: 650px;
+    position: relative;
+}
+.video-pause{
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left:610px;
+    bottom:215px;
 }
 .video-control{
     position:relative;
@@ -431,14 +439,25 @@ body{
     width: 452px;
     height: 254px;
 }
+.video-slider-pagination{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 620px;
+    margin-top:40px;
+}
+.video-pagination-circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+}
 .gallery{
     position: relative;
     width: 1440px;
     height: 2200PX;
     overflow-y: clip;
-
-    /* ЭТО ОБЯЗАТЕЛЬНО ИЗМЕНИТЬ КОГДА ДОБАВЛЮ СЛАЙДЕР */
-    margin-top: 50px;
 }
 .gallery-container{
     width: 1440px;
