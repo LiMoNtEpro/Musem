@@ -22,14 +22,18 @@ body{
     justify-self: center;
 }
 .header{
+    display:flex;
+    align-items: center;
     position: relative;
     overflow-y:clip;
     width: 1440px;
     background-color: #030303;
     color: white;
+    height: 150px;
 }
 
 .header-container{
+    width: 1440px;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -44,6 +48,7 @@ body{
     font-size: 22px;
     font-weight: 200;
     letter-spacing: 2px;
+    padding:0;
 }
 .nav-link{
     text-decoration: none;
@@ -69,6 +74,7 @@ body{
     letter-spacing: 5px;
 }
 .main{
+    width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -78,7 +84,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     margin:0;
 }
 .welcome{
@@ -88,6 +93,10 @@ body{
     overflow-y: clip;
     width: 1440px;
     height: 810px;
+    margin-bottom:75px;
+}
+.welcome-container{
+    width: 1440px;
 }
 .background-black{
     position:absolute;
@@ -99,7 +108,8 @@ body{
     background-color: #030303;
 }
 .welcome-text{
-    position:absolute;  
+    position:absolute;
+    top:150px;
     z-index: 1;
 }
 .welcome-title{
@@ -119,6 +129,8 @@ body{
     font-weight: 300;
     font-size: 28px;
     letter-spacing: 2px;
+    margin:0;
+    margin-top: 25px;
 }
 .welcome-button{
     display:flex;
@@ -128,6 +140,7 @@ body{
     width: 360px;
     background-color: #710707;
     border-radius: 10px;
+    margin-top: 75px;
 }
 .welcome-link{
     text-decoration: none;
@@ -170,14 +183,16 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top:40px;
+    margin-bottom:63px;
 }
 .visiting-title{
     font-family: Forum;
     font-weight: 400;
     font-size: 80px;
+    line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
+
     color: #9D8665;
     margin:0;
 }
@@ -186,7 +201,8 @@ body{
     background-color: #710707;
     height: 3px;
     width: 1440px;
-    margin-bottom: 60px;
+    margin-top: 25px;
+    margin-bottom: 75px;
 }
 .visiting-list{
     display:flex;
@@ -196,7 +212,18 @@ body{
 .visiting-item{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-bottom: 65px;
+}
+.visiting-item-2{
+    margin:0;
+}
+.visiting-link{
+    width: 440px;
+    height: 285px;
+}
+.visiting-image{
+    width: 100%;
+    height: 100%;
 }
 .virtual_tour-title{
     font-family: Forum;
@@ -205,8 +232,8 @@ body{
     line-height: 100%;
     letter-spacing: 5px;
     text-transform: uppercase;
-    margin: 1.5px 0;
-    margin-top: 20px;
+    margin:0;
+    margin-top: 26px;
 }
 .virtual_tour-subtitle{
     font-family: Roboto;
@@ -214,14 +241,23 @@ body{
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 0%;
-    margin:5px 0;
+    margin:0;
+    margin-bottom: 13px;
+}
+.virtual_tour-subtitle2{
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin:0;
 }
 .visiting-item-line{
     border:none;
     background-color: #710707;
     width: 300px;
     height: 2px;
-    margin: 5px 0;
+    margin: 12px 0;
 }
 .explore{
     position: relative;
@@ -250,11 +286,14 @@ body{
     letter-spacing: 5px;
     text-transform: uppercase;
     color: white;
+    margin: 0;
 }
 .explore-line{
     border:none;
     background-color: #710707;
     height: 3px;
+    margin-top: 25px;
+    margin-bottom: 75px;
 }
 .explore-subtitle{
     font-family: Roboto;
@@ -275,6 +314,7 @@ body{
 .explore-slider{
     width: 720px;
     height: 700px;
+    margin-top: 15px;
 }
 .explore-image{
     position: absolute;
@@ -294,8 +334,6 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top:0;
-    
 }
 .video-text{
     width: 1440px;
@@ -304,6 +342,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 75px;
 }
 .video-title{
     font-family: Forum;
@@ -313,6 +352,7 @@ body{
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #9D8665;
+    margin:0;
 }
 .video-subtitle{
     font-family: Roboto;
@@ -322,6 +362,7 @@ body{
     letter-spacing: 0%;
     vertical-align: middle;
     width: 720px;
+    margin:0;
 }
 .video-image{
     width: 100%;
@@ -340,6 +381,7 @@ body{
     width: 1440px;
     height: 85px;
     background-color: black;
+    margin-bottom: 40px;
 }
 .bar{
     position:relative;
@@ -385,7 +427,6 @@ body{
     border-radius: 50px;
 }
 .video-frame{
-    margin-top: 30px;
     width: 452px;
     height: 254px;
 }
@@ -394,6 +435,9 @@ body{
     width: 1440px;
     height: 2200PX;
     overflow-y: clip;
+
+    /* ЭТО ОБЯЗАТЕЛЬНО ИЗМЕНИТЬ КОГДА ДОБАВЛЮ СЛАЙДЕР */
+    margin-top: 50px;
 }
 .gallery-container{
     width: 1440px;
@@ -441,14 +485,14 @@ body{
 .gallery-grid-2{
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 456px 570px 570px;
     gap: 24px;
 }
 .gallery-grid-3{
     margin-top: 50px;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 580px 464px 464px 348px;
+    grid-template-rows: 570px 456px 456px;
     gap: 24px;
 }
 .gallery-image{
@@ -470,13 +514,14 @@ body{
     text-transform: uppercase;
     color: #9D8665;
     margin: 0;
+    margin-top: 2px;
 }
 .tickets-line{
     width: 100%;
     height: 3px;
     background-color: #710707;
-    margin-top: 25px;
-    margin-bottom: 75px;
+    margin-top: 26px;
+    margin-bottom: 77px;
 }
 .tickets-image{
     width: 720px;
@@ -485,8 +530,8 @@ body{
 .tickets-buttons{
     position: absolute;
     height: fit-content;
-    top: 0;
-    left: 780px;
+    top: 1px;
+    left: 779px;
 }
 .tickets-buttons-title{
     font-family: Roboto;
@@ -495,14 +540,17 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 56px;
 }
 .tickets-choice{
-    margin-bottom: 25px;
+    margin-bottom: 29px;
 }
 .choice-button{
     height: 17px;
     width: 17px;
+    margin: 0;
+    margin-right: 19px;
+
 }
 .buttons-title{
     font-family: Roboto;
@@ -516,8 +564,8 @@ body{
     display: flex;
     flex-direction: column;
     width: 150px;
-    right: 0;
-    top:0;
+    right: 2px;
+    top:1px;
 }
 .amount-title{
     font-family: Roboto;
@@ -526,7 +574,7 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
     text-align: end;
 }
 .amount-subtitle{
@@ -536,18 +584,21 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     margin:0;
-    margin-bottom: 15px;
-    margin-top: 10px;
+    margin-top: 9px;
+    margin-left: 1px;
 }
 .amount-counter{
+    position:relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     width: 150px;
     height: 50px;
     border: solid 3px black;
     color: #000000;
+    margin-left: 1px;
+    margin-top: 16px;
+    margin-bottom: 4px;
 }
 .counter-minus{
     font-family: Roboto;
@@ -556,6 +607,7 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    margin-left: 10px;
 }
 .counter-plus{
     font-family: Roboto;
@@ -564,6 +616,7 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    margin-left: 36px;
 }
 .counter-number{
     font-family: Roboto;
@@ -572,11 +625,21 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    margin-left: 35px;
 }
 .amount-result{
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
+    margin-top: 48px;
+    margin-left: 1px;
+}
+.amount-title-2{
+    white-space: nowrap;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 1.65px;
+    margin: 0;
 }
 .tickets-buy-button{
     position: absolute;
@@ -596,7 +659,6 @@ body{
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 2px;
-    margin: 0;
 }
 
 
