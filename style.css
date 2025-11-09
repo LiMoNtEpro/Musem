@@ -313,15 +313,32 @@ body{
     color: rgb(202, 170, 125);
 }
 .explore-slider{
+    position:relative;
     width: 720px;
     height: 700px;
     margin-top: 15px;
 }
 .explore-image{
-    position: absolute;
-    left: 720px;
     width: 720px;
     height: 700px;
+}
+.explore-image-container-before{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 440px;
+    z-index: 1;
+}
+.explore-image-container-after{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 720px;
+}
+.explore-slider-line{
+    position: absolute;
+    z-index: 2;
+    left:420px
 }
 .video{
     width: 1440px;
@@ -525,6 +542,7 @@ body{
 .tickets-container{
     width: 1440px;
     position:relative;
+    margin-bottom: 0;
 }
 .tickets-title{
     font-family: Forum;
@@ -679,6 +697,19 @@ body{
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 2px;
+}
+.parallax{
+    margin-top: 68px;
+    width: 1920px;
+    height: 400px;
+    overflow-y: clip;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.parallax-image{
+    width: 1920px;
 }
 
 
