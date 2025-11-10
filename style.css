@@ -177,7 +177,56 @@ body{
     background: transparent;
     background: linear-gradient(to right,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 50%);
 }
-
+.welcome-slider-pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 600px;
+    height: 120px;
+    background-color: #030303;
+    right: 0;
+    bottom:0;
+    z-index: 100;
+}
+.welcome-slider-num{
+    display: flex;
+    justify-content: space-between;
+    width: 76px;
+    margin-left: 14px;
+}
+.welcome-num-text{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color:white;
+    margin:0;
+}
+.welcome-carousel-pagination{
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4px;
+}
+.carousel-block{
+    width: 16px;
+    height: 16px;
+    background-color: white;
+}
+.welcome-slider-arrows{
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 13px;
+}
+.slider-arrow-right{
+    rotate: 180deg;
+}
 .visiting{
     width: 1440px;
     display:flex;
