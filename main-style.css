@@ -741,6 +741,14 @@ body{
     height: 50px;
     background-color: #000000;
 }
+.tickets-buy-link{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .buy-button-text{
     color: white;
     font-family: Roboto;
