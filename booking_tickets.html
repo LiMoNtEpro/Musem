@@ -64,7 +64,64 @@
                 </div>
             </div>
         </div>
-        <div class="overview"></div>
+        <div class="payment">
+            <div class="payment-info">
+                <p class="payment-title">Overview</p>
+                <p class="payment-subtitle">Tour to Louvre</p>
+                <div class="payment-info-sting">
+                    <img src="assets/svg/booking/date.svg" alt="" class="payment-icons">
+                    <p class="payment-info-text">Friday, August 19</p>
+                </div>
+                <div class="payment-info-sting">
+                    <img src="assets/svg/booking/time.svg" alt="" class="payment-icons">
+                    <p class="payment-info-text">16 : 30</p>
+                </div>
+                <div class="payment-info-sting">
+                    <img src="assets/svg/booking/check_circle_outline.svg" alt="" class="payment-icons">
+                    <p class="payment-info-text">Temporary exhibition</p>
+                </div>
+                <img src="assets/img/booking/payment-info-image.png" alt="" class="payment-info-image">
+            </div>
+            <div class="payment-total">
+                <div class="payment-total-string">
+                    <div class="num-box"><p class="payment-total-num">2</p></div>
+                    <p class="payment-total-text">Basic (20 €)</p>
+                    <p class="payment-total-value">40 €</p>
+                </div>
+                <div class="payment-total-string">
+                    <div class="num-box"><p class="payment-total-num">2</p></div>
+                    <p class="payment-total-text">Senior (10 €)</p>
+                    <p class="payment-total-value">20 €</p>
+                </div>
+                <div class="payment-total-line"></div>
+                <div class="payment-total-string">
+                    <p class="payment-total-title">Total:</p>
+                    <p class="payment-total-sum">60 €</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <img src="assets/svg/booking/Visa.svg" alt="" class="visa">
+                    <img src="assets/svg/booking/Mastercard.svg" alt="" class="mastercard">
+                    <p class="card-text">Card number</p>
+                    <form><input type="tel" pattern="[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}" class="card-num"></form>
+                    <p class="card-text">Expiration date</p>
+                    <div class="card-date">
+                        <form><input type="number" min="1" max="12" class="card-month"></form>
+                        <form><input type="number" min="2025" max="2035" class="card-year"></form>
+                    </div>
+                    <p class="card-text">Cardholder name</p>
+                    <form><input type="text" class="card-name"></form>
+                </div>
+                <div class="card-back">
+                    <div class="card-line"></div>
+                    <p class="card-text cvv">CVC/CVV</p>
+                    <form><input type="text" class="card-cvv"></form>
+                    <p class="cart-text back-expl">The last <br>3 or 4 digits on back <br>of the card</p>
+                </div>
+            </div>
+            <div class="book-button"><p class="payment-button-text">Book</p></div>
+        </div>
     </div>
 </body>
 </html>
