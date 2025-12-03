@@ -24,17 +24,19 @@ body{
     overflow-x: hidden;
 }
 .header{
+    max-width: 1440px;
     display:flex;
     align-items: center;
+    flex-shrink: 1;
     position: relative;
     overflow-y:clip;
-    width: 1440px;
     background-color: #030303;
     color: white;
     height: 150px;
 }
 
 .header-container{
+    max-width: 1440px;
     width: 1440px;
     display:flex;
     justify-content: space-between;
