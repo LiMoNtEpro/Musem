@@ -715,8 +715,8 @@ body{
     margin-bottom: 74px;
 }
 .tickets-underline{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr minmax(175px, 1fr);
 }
 .tickets-image-container{
     max-width: 720px;
@@ -1264,6 +1264,7 @@ body{
     }
     .tickets-underline{
         padding-right: 29px;
+        grid-template-columns: auto minmax(175px, 1fr);
     }
     .tickets-image-container{
         max-height: 440px;
