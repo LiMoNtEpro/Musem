@@ -717,10 +717,9 @@ body{
 .tickets-underline{
     display: grid;
     grid-template-columns: auto 1fr minmax(175px, 1fr);
+    column-gap: 60px;
 }
 .tickets-image-container{
-    max-width: 720px;
-    min-width: 700px;
     width: 100%;
 }
 .tickets-image{
@@ -728,17 +727,16 @@ body{
     width: 100%;
 }
 .tickets-menu{
+    display: flex;
+    flex-direction: column;
     position: relative;
     min-width: 175px;
     width: 100%;
-    display: flex;
     margin-left: auto;
     margin-top: 2px;
-    justify-content: space-between;
 }
 .tickets-buttons{
     height: fit-content;
-    margin-left: 60px;
 }
 .tickets-buttons-title{
     font-family: Roboto;
@@ -766,14 +764,12 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
 }
-.amount-buy{
-    margin-left: auto;
-}
 .tickets-amount{
     display: flex;
     flex-direction: column;
     max-width: 150px;
     width: 100%;
+    margin-left: auto;
 }
 .amount-title{
     font-family: Roboto;
@@ -847,9 +843,8 @@ body{
     margin: 0;
 }
 .tickets-buy-button{
-    position:absolute;
-    right: 0;
-    bottom:111px;
+    margin-top: 63px;
+    margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1004,7 +999,6 @@ body{
     width: 363px;
     margin-top: 6px;
     margin-left: 140px;
-    /* margin-right: 92px; */
 }
 .footer-second-column{
     margin-right: 3px;
@@ -1303,7 +1297,7 @@ body{
         padding-right: 9px;
     }
     .tickets-buy-button{
-        bottom: 0;
+        margin-top: auto;
     }
     .parallax{
         margin: 0;
@@ -1516,6 +1510,26 @@ body{
         margin-top: 20px;
         margin-bottom: 40px;
     }
-    
+    .tickets-underline{
+        padding-right: 49px;
+    }
+    .tickets-image{
+        aspect-ratio: 444/340;
+    }
+    .amount-title{
+        margin-bottom: 35px;
+    }
+    .amount-counter-basic{
+        margin-bottom: 19px;
+    }
+    .amount-counter-senior{
+        margin-bottom: 14px;
+    }
+    .tickets-buy-button{
+        margin-top: 43px;
+    }
+    .parallax{
+        height: 300px;
+    }
 }
 
