@@ -949,6 +949,7 @@ body{
     flex: 1 0;
 }
 .contacts-image{
+    height: 100%;
     width:100%;
 }
 
@@ -1337,6 +1338,7 @@ body{
         min-width: auto;
     }
     .contacts-image-container {
+        height: 100%;
         width: 100%;
         min-width: auto;
 
@@ -1530,6 +1532,59 @@ body{
     }
     .parallax{
         height: 300px;
+    }
+    .contacts-container{
+        padding-bottom: 68px;
+    }
+    .contacts-title{
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .contacts-line{
+        margin-bottom: 39px;
+    }
+    .contacts-under-line{
+        flex-direction: column;
+    }
+    .contacts-text{
+        margin-bottom: 40px;
+    }
+    .contacts-subtitle{
+        font-size: 20px;
+        margin-bottom: 41px;
+    }
+    .contacts-info-text{
+        font-size: 18px;
+    }
+    .contacts-image-container{
+        aspect-ratio: 728/476;
+    }
+    .footer-container{
+        padding-top: 46px;
+    }
+    .footer-first-row{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .footer-navigation{
+        margin-top: 11px;
+        margin-left: 98px;
+        max-width: 345px;
+    }
+    .footer-list{
+        font-size: 18px;
+        height: 113px;
+    }
+    .footer-socials{
+        margin-top: 35px;
+        margin-right: 90px;
+    }
+    .footer-line-container{
+        margin-top: 36px;
+        margin-bottom: 20px;
+    }
+    .footer-line{
+        height: 1px;
     }
 }
 
