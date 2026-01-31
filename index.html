@@ -150,7 +150,15 @@
                     </div>
                     <div class="video-and-control">
                         <div class="current-video">
-                            <a href="https://www.youtube.com/watch?v=zp1BXPX8jcU" class="video-link"><img src="assets/img/video/f00089fd43949a1332ea6150e413fd6a0a39f62d.jpg" alt="video image" class="video-image"><img src="assets\svg\video\control\Group.svg" alt="Pause image" class="video-pause"></a>
+                            <a href="https://www.youtube.com/watch?v=zp1BXPX8jcU" class="video-link"><img src="assets/img/video/f00089fd43949a1332ea6150e413fd6a0a39f62d.jpg" alt="video image" class="video-image"><img src="assets\svg\video\control\Group.svg" alt="Pause image" class="video-pause">
+                            </a>
+                            <div class="bar bar-in-video">
+                                <div class="video-bar">
+                                    <div class="video-bar-red">
+                                        <div class="video-circle"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="video-control">
                             <img src="assets/svg/video/control/play.svg" alt="play button" class="play-button-image">
@@ -173,9 +181,9 @@
                         </div>
                     </div>
                     <div class="youtube-videos">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=P26BnOYjyNzX29Dn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/NOhDysLnTvY?si=Urk3ggfMR2NkicTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=xsgUcSsnRDbRaz-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class="video-frame-1" src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=P26BnOYjyNzX29Dn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class="video-frame-1 video-frame-2" src="https://www.youtube.com/embed/NOhDysLnTvY?si=Urk3ggfMR2NkicTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class="video-frame-1 video-frame-3" src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=xsgUcSsnRDbRaz-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="video-slider-pagination-container">
                         <div class="video-slider-pagination">
@@ -235,24 +243,23 @@
                         <div class="tickets-image-container">
                             <img src="assets/img/tickets/1.jpg" alt="Tickets image" class="tickets-image">
                         </div>
-                        <div class="tickets-menu">
-                            <div class="tickets-buttons">
-                                <p class="tickets-buttons-title">Ticket Type</p>
-                                <div class="tickets-choice">
-                                    <input type="radio" class="choice-button" id="TicketsChoice1" name="Tickets" value="Permanent exhibition">
-                                    <label for="TicketsChoice1" class="buttons-title">Permanent exhibition</label>
-                                </div>
-                                <div class="tickets-choice">
-                                    <input type="radio" class="choice-button" id="TicketsChoice2" name="Tickets" value="Temporary exhibition">
-                                    <label for="TicketsChoice2" class="buttons-title">Temporary exhibition</label>
-                                </div>
-                                <div class="tickets-choice" style="margin-bottom: 0;">
-                                    <input type="radio" class="choice-button" id="TicketsChoice3" name="Tickets" value="Combined Admission">
-                                    <label for="TicketsChoice3" class="buttons-title">Combined Admission</label>
-                                </div>
+                        <div class="tickets-buttons">
+                            <p class="tickets-buttons-title">Ticket Type</p>
+                            <div class="tickets-choice">
+                                <input type="radio" class="choice-button" id="TicketsChoice1" name="Tickets" value="Permanent exhibition">
+                                <label for="TicketsChoice1" class="buttons-title">Permanent exhibition</label>
                             </div>
-                            <div class="amount-buy">
-                                <div class="tickets-amount">
+                            <div class="tickets-choice">
+                                <input type="radio" class="choice-button" id="TicketsChoice2" name="Tickets" value="Temporary exhibition">
+                                <label for="TicketsChoice2" class="buttons-title">Temporary exhibition</label>
+                            </div>
+                            <div class="tickets-choice" style="margin-bottom: 0;">
+                                <input type="radio" class="choice-button" id="TicketsChoice3" name="Tickets" value="Combined Admission">
+                                <label for="TicketsChoice3" class="buttons-title">Combined Admission</label>
+                            </div>
+                        </div>
+                        <div class="tickets-menu">
+                            <div class="tickets-amount">
                                     <p class="amount-title">Amount</p>
                                     <p class="amount-subtitle">Basic 18+</p>
                                     <div class="amount-counter amount-counter-basic">
@@ -271,7 +278,6 @@
                                         <p class="amount-title-2">220</p>
                                     </div>
                                 </div>
-                            </div>
                             <div class="tickets-buy-button">
                                 <a href="booking_tickets.html" class="tickets-buy-link"><p class="buy-button-text">Buy Now</p></a>
                             </div>
@@ -326,11 +332,21 @@
                     </div>
                 </div>
                 <div class="footer-socials">
-                    <img src="assets/img/social-icons/Youtube.png" alt="Youtube" class="socials-image">
-                    <img src="assets/img/social-icons/Instagram.png" alt="Instagram" class="socials-image">
-                    <img src="assets/img/social-icons/Facebook.png" alt="Facebook" class="socials-image">
-                    <img src="assets/img/social-icons/Twitter.png" alt="Twitter" class="socials-image">
-                    <img src="assets/img/social-icons/Pinterest.png" alt="Pintrest" class="socials-image">
+                    <div class="footer-socials-image-container">
+                        <img src="assets/img/social-icons/Youtube.png" alt="Youtube" class="socials-image">
+                    </div>
+                    <div class="footer-socials-image-container">
+                        <img src="assets/img/social-icons/Instagram.png" alt="Instagram" class="socials-image">
+                    </div>
+                    <div class="footer-socials-image-container">
+                        <img src="assets/img/social-icons/Facebook.png" alt="Facebook" class="socials-image">
+                    </div>
+                    <div class="footer-socials-image-container">
+                        <img src="assets/img/social-icons/Twitter.png" alt="Twitter" class="socials-image">
+                    </div>
+                    <div class="footer-socials-image-container">
+                        <img src="assets/img/social-icons/Pinterest.png" alt="Pintrest" class="socials-image">
+                    </div>
                 </div>
             </div>
             <div class="footer-line-container">
