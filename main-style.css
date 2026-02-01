@@ -1046,6 +1046,9 @@ body{
     line-height: 22px;
     letter-spacing: 2px;
 }
+.rolling-scopes{
+    margin-left: 57px;
+}
 @media (max-width: 1440px){
     .explore-container{
         justify-content: center;
@@ -1506,9 +1509,6 @@ body{
     .tickets-underline{
         padding-right: 49px;
     }
-    .tickets-image-container{
-        
-    }
     .tickets-image{
         aspect-ratio: 444/340;
     }
@@ -1528,7 +1528,7 @@ body{
         height: 300px;
     }
     .contacts-container{
-        padding-bottom: 68px;
+        padding-bottom: 63px;
     }
     .contacts-title{
         font-size: 40px;
@@ -1561,13 +1561,13 @@ body{
         justify-content: start;
     }
     .footer-navigation{
+        column-gap: 165px;
         margin-top: 11px;
         margin-left: 98px;
         max-width: 345px;
     }
-    .footer-list{
+    .footer-link{
         font-size: 18px;
-        height: 113px;
     }
     .footer-socials{
         margin-top: 35px;
@@ -1584,12 +1584,6 @@ body{
 }
 
 @media (max-width:420px){
-    /* .explore-slider{
-        display:none;
-    } */
-    .footer-socials{
-        display:none;
-    }
     .visiting-list{
         padding:0;
     }
@@ -1832,6 +1826,7 @@ body{
         margin-bottom: 15px;
     }
     .tickets-buy-button {
+        margin: 0;
         position:relative;
         height: 50px;
     }
@@ -1854,6 +1849,9 @@ body{
     .contacts-under-line{
         flex-direction: column;
     }
+    .contacts-text{
+        margin-bottom: 41px;
+    }
     .contacts-subtitle {
         font-size: 16px;
         margin-bottom: 42px;
@@ -1863,7 +1861,7 @@ body{
         margin-top: 18px;
     }
     .contacts-image-container{
-        margin-top: 41px;
+        margin: 0;
     }
     .footer-first-row{
         flex-direction: column;
@@ -1876,10 +1874,41 @@ body{
         margin-top: 1px;
     }
     .footer-navigation{
-        margin-top: 40px;
+        height: auto;
+        width: 100%;
+        max-width: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: min-content min-content;
+        row-gap: 33px;
+        column-gap: 80px;
+        margin-top: 43px;
     }
-    .footer-list {
+    .footer-link {
         font-size: 16px;
     }
-
+    .footer-special-1{
+        text-align: center;
+    }
+    .footer-special-2{
+        text-align: end;
+    }
+    .footer-socials{
+        width: 260px;
+        margin: 0;
+        margin-top: 40px;
+        align-self: center;
+    }
+    .footer-line-container{
+        margin-top: 37px;
+    }
+    .footer-line{
+        height: 2px;
+    }
+    .footer-last-paragraph{
+        white-space: nowrap;
+        font-size: 16px;
+    }
+    .rolling-scopes{
+        display: none;
+    }
 }   
