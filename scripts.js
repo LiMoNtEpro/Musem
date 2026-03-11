@@ -1,3 +1,13 @@
+//welcome
+const slides = document.querySelectorAll('.welcome-image')
+const slideArrowLeft = document.querySelector('.slider-arrow-left')
+const slideArrowRight = document.querySelector('.slider-arrow-right')
+
+// slideArrowLeft.addEventListener('click', )
+
+
+
+
 //tickets
 const ticketsBasicNum = document.querySelector('.counter-number-basic')
 const ticketsBasicAdjust = document.querySelector('.counter-plus-basic')

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import "ScrollSlider/style.css";
 html {
   scroll-behavior: smooth;
 }
@@ -189,6 +189,14 @@ body{
     line-height: 100%;
     margin:0;
 }
+.welcome-slider-container{
+    width:min-content;
+    max-width: 1000px;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
 .welcome-slider{
     position:absolute;
     top:0;
@@ -272,7 +280,11 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.slider-arrow-left{
+    cursor: pointer;
+}
 .slider-arrow-right{
+    cursor: pointer;
     rotate: 180deg;
 }
 .visiting{
@@ -811,6 +823,7 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    cursor: pointer;
 }
 .counter-plus{
     font-family: Roboto;
@@ -819,6 +832,7 @@ body{
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    cursor: pointer;
 }
 .counter-number{
     font-family: Roboto;
