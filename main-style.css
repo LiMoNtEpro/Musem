@@ -120,11 +120,11 @@ body{
     align-items: center;
     overflow-y: clip;
     width: 100%;
-    /* max-height: 810px; */
     height: 100%;
-    /* margin-bottom:75px; */
 }
 .welcome-container{
+    display: flex;
+    align-items: flex-start;
     position: relative;
     padding:0px;
     height: 100%;
@@ -190,8 +190,10 @@ body{
     margin:0;
 }
 .welcome-slider{
-    position:relative;
+    position:absolute;
     top:0;
+    right:0;
+    z-index: -1;
     /* left: 440px; */
     margin-left: auto;
     max-width: 1000px;
