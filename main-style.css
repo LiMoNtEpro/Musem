@@ -283,6 +283,9 @@ body{
     width: 16px;
     background-color: white;
 }
+.carousel-block.active{
+    background-color: #D2B183;
+}
 .welcome-slider-arrows{
     width: 80px;
     display: flex;

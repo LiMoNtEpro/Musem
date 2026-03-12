@@ -56,7 +56,7 @@ function scrollToPrev(){
     scrollByAmount(getPrevSlideWidth())
 }
 slideArrowRight.addEventListener('click', ()=>{
-    scrollToNext()
+    scrollToNext();
 })
 slideArrowLeft.addEventListener('click', ()=>{
     scrollToPrev()
@@ -73,10 +73,29 @@ function InfLoop(){
         slideTrack.scrollTo({left: firstRealSlide.offsetLeft,behavior:'instant'})
     }
 }
-slideTrack.addEventListener('scroll', ()=>{
-    setTimeout(InfLoop(),2000)
+slideTrack.addEventListener('scroll', (event)=>{
+    setTimeout(InfLoop(),1000);
+    changeBlockAndNum()
 })
-
+function changeBlockAndNum (){
+    //blocks
+    const blocks = [...document.querySelectorAll('.carousel-block')]
+    blocks.forEach(block => {
+        if(block.classList.contains('active')){
+            block.classList.remove('active')
+        }
+    });
+    const oneSlideWidth = slideTrack.scrollWidth/7
+    const currentSlide = Math.trunc(slideTrack.scrollLeft/oneSlideWidth) - 1
+    if(currentSlide >= 0 && currentSlide < 5){
+        if(blocks[currentSlide]){
+            blocks[currentSlide].classList.add('active')
+        }
+    }
+    //numbers
+    const num = document.querySelector('.welcome-num-text')
+    num.textContent = (`0${currentSlide+1}`)
+}
 
 //tickets
 const ticketsBasicNum = document.querySelector('.counter-number-basic')
