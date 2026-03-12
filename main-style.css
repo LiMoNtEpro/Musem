@@ -190,11 +190,19 @@ body{
     margin:0;
 }
 .welcome-slider-container{
+    opacity: 0;
+    transition: opacity 0.2s ease;
     width:min-content;
     max-width: 1000px;
     position: absolute;
     right: 0;
     top:0;
+}
+.welcome-slider-container.is-ready{
+    opacity: 1;
+}
+.welcome-slider-track{
+    position: relative;
 }
 
 .welcome-slider{

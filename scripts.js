@@ -1,12 +1,25 @@
 //welcome
+const slideContainer = document.querySelector('.welcome-slider-container')
 const slideTrack = document.querySelector('.welcome-slider-track')
 const slideArrowLeft = document.querySelector('.slider-arrow-left')
 const slideArrowRight = document.querySelector('.slider-arrow-right')
-
-// slideArrowLeft.addEventListener('click', )
 function getSlides(){
     return [...document.querySelectorAll('.welcome-image')]
 }
+function initInfScroll(){
+    const slides = getSlides()
+    if (slides.length===0) return;
+
+    const firstClone = slides[0].cloneNode(true)
+    const lastClone = slides[slides.length-1].cloneNode(true)
+    slideTrack.append(firstClone)
+    slideTrack.prepend(lastClone)
+    slideTrack.scroll({left: getSlides()[2].offsetLeft, behavior: 'instant'})
+    requestAnimationFrame(()=>{
+        slideContainer.classList.add('is-ready')
+    })
+}
+initInfScroll()//создание двух дополнительных слайдов в начале и в конце
 function getNextSlide(){
     const currentScroll = slideTrack.scrollLeft
     return getSlides().find((slide)=>{
@@ -48,14 +61,26 @@ slideArrowRight.addEventListener('click', ()=>{
 slideArrowLeft.addEventListener('click', ()=>{
     scrollToPrev()
 })
+function InfLoop(){
+    const lastCloneSlide = getSlides()[getSlides().length-1]
+    const firstCloneSlide = getSlides()[0]
+    const lastRealSlide = getSlides()[getSlides().length-2]
+    const firstRealSlide = getSlides()[1]
 
-
+    if (slideTrack.scrollLeft<=firstCloneSlide.offsetLeft){
+        slideTrack.scrollTo({left: lastRealSlide.offsetLeft, behavior: 'instant'})
+    }else if(slideTrack.scrollLeft>= lastCloneSlide.offsetLeft){
+        slideTrack.scrollTo({left: firstRealSlide.offsetLeft,behavior:'instant'})
+    }
+}
+slideTrack.addEventListener('scroll', ()=>{
+    setTimeout(InfLoop(),2000)
+})
 
 
 //tickets
 const ticketsBasicNum = document.querySelector('.counter-number-basic')
 const ticketsBasicAdjust = document.querySelector('.counter-plus-basic')
-// console.log(ticketsBasicAdjust)
 const ticketsBasicReduce = document.querySelector('.counter-minus-basic')
 const ticketsSeniorNum = document.querySelector('.counter-number-senior')
 const ticketsSeniorAdjust = document.querySelector('.counter-plus-senior')
