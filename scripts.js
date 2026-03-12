@@ -74,7 +74,7 @@ function InfLoop(){
     }
 }
 slideTrack.addEventListener('scroll', (event)=>{
-    setTimeout(InfLoop(),1000);
+    setTimeout(InfLoop,1000);
     changeBlockAndNum()
 })
 function changeBlockAndNum (){
@@ -94,9 +94,38 @@ function changeBlockAndNum (){
     }
     //numbers
     const num = document.querySelector('.welcome-num-text')
-    num.textContent = (`0${currentSlide+1}`)
+    if (currentSlide+1!=0){
+        num.textContent = (`0${currentSlide+1}`)
+    }
 }
-
+//mouse scroll
+let isPressed = false
+let isMovingRight = false
+let startX;
+let ScrollStart;
+slideTrack.addEventListener('mousedown', (event)=>{
+    isPressed=true
+    startX=event.pageX - slideTrack.offsetLeft;
+    ScrollStart = slideTrack.scrollLeft
+    slideTrack.style.scrollBehavior = 'auto'
+})
+window.addEventListener('mouseup', ()=>{
+    isPressed = false
+    slideTrack.style.scrollBehavior = 'smooth'
+    slideTrack.style.scrollSnapType = 'x mandatory';
+    slideTrack.scrollBy({ left: (isMovingRight? -1:1), behavior: 'smooth' });
+})
+slideTrack.addEventListener('mousemove', (event)=>{
+    if (!isPressed) return;
+    event.preventDefault()
+    slideTrack.style.scrollSnapType = 'none';
+    const x = event.pageX - slideTrack.offsetLeft
+    const walk = (x-startX)
+    isMovingRight = x > startX;
+    slideTrack.scrollLeft = ScrollStart-walk
+    console.log(slideTrack.scrollLeft)
+    InfLoop();
+})
 //tickets
 const ticketsBasicNum = document.querySelector('.counter-number-basic')
 const ticketsBasicAdjust = document.querySelector('.counter-plus-basic')

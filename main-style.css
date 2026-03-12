@@ -217,6 +217,11 @@ body{
     min-width: 700px;
     width: calc(100% - 440px);
 }
+.welcome-image{
+    -webkit-user-drag: none;
+    user-select: none;
+    cursor: grab;
+}
 .slider-image{
     max-width: 1000px;
     max-height: 750px;
