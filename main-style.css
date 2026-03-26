@@ -448,7 +448,7 @@ body{
     position: absolute;
     overflow: hidden;
     height: 100%;
-    width: 440px;
+    width: 60%;
     z-index: 1;
 }
 .explore-image-container-after{
@@ -460,8 +460,10 @@ body{
 .explore-slider-line{
     position: absolute;
     z-index: 2;
-    left:420px;
+    left: 60%;
     height: 100%;
+    transform: translateX(-50%);
+    cursor: grab;
 }
 .video{
     width: 100%;
