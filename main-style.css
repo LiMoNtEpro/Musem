@@ -998,6 +998,7 @@ body{
     flex: 1 0;
 }
 .contacts-image{
+    height: 100%;
     width:100%;
 }
 
@@ -1337,7 +1338,7 @@ body{
         padding-right: 9px;
     }
     .tickets-buy-button{
-        bottom: 0;
+        margin-top: auto;
     }
     .parallax{
         margin: 0;
@@ -1385,6 +1386,7 @@ body{
         min-width: auto;
     }
     .contacts-image-container {
+        height: 100%;
         width: 100%;
         min-width: auto;
 
