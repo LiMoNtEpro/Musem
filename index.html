@@ -46,8 +46,14 @@
                             </div>
                         </a>
                     </div>
-                    <div class="welcome-slider">
-                        <img src="assets/img/welcome-slider/1.jpg" alt="Slider image" class="slider-image">
+                    <div class="welcome-slider-container">
+                        <scroll-slider-track class="welcome-slider-track">
+                        <img src="assets/img/welcome-slider/1.jpg" alt="slider image" class="welcome-image">
+                        <img src="assets/img/welcome-slider/2.jpg" alt="slider image" class="welcome-image">
+                        <img src="assets/img/welcome-slider/3.jpg" alt="slider image" class="welcome-image">
+                        <img src="assets/img/welcome-slider/4.jpg" alt="slider image" class="welcome-image">
+                        <img src="assets/img/welcome-slider/5.jpg" alt="slider image" class="welcome-image">
+                        </scroll-slider-track>
                         <div class="welcome-slider-pagination-container">
                             <div class="welcome-slider-pagination">
                                 <div class="welcome-slider-num">
@@ -56,7 +62,7 @@
                                     <p class="welcome-num-text">05</p>
                                 </div>
                                 <div class="welcome-carousel-pagination">
-                                    <div class="carousel-block" style="background-color: #D2B183;"></div>
+                                    <div class="carousel-block active"></div>
                                     <div class="carousel-block"></div>
                                     <div class="carousel-block"></div>
                                     <div class="carousel-block"></div>
@@ -67,7 +73,7 @@
                                     <img src="assets\svg\welcome\arrow.svg" alt="" class="slider-arrow-right">
                                 </div>
                             </div>
-                        </div>
+                        </div>  
                     </div>
                 </div>
             </section>
@@ -150,15 +156,8 @@
                     </div>
                     <div class="video-and-control">
                         <div class="current-video">
-                            <a href="https://www.youtube.com/watch?v=zp1BXPX8jcU" class="video-link"><img src="assets/img/video/f00089fd43949a1332ea6150e413fd6a0a39f62d.jpg" alt="video image" class="video-image"><img src="assets\svg\video\control\Group.svg" alt="Pause image" class="video-pause">
-                            </a>
-                            <div class="bar bar-in-video">
-                                <div class="video-bar">
-                                    <div class="video-bar-red">
-                                        <div class="video-circle"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <video src="assets/videos/LoovreVideo.mp4" class="video-player"></video>
+                            <img src="assets\svg\video\control\Group.svg" alt="Pause image" class="video-pause">
                         </div>
                         <div class="video-control">
                             <img src="assets/svg/video/control/play.svg" alt="play button" class="play-button-image">
@@ -168,15 +167,9 @@
                                         <div class="video-circle"></div>
                                     </div>
                                 </div>
-                            </div>         
-                            <img src="assets/svg/video/control/volume.svg" alt="volume button" class="volume-button-image">
-                            <div class="bar-volume">
-                                <div class="volume-bar">
-                                    <div class="volume-bar-red">
-                                        <div class="volume-circle"></div>
-                                    </div>
-                                </div>
                             </div>
+                            <img src="assets/svg/video/control/volume.svg" alt="volume button" class="volume-button-image">         
+                            <input type="range" name="volume" class="video-volume-range" min="0" max="1" step="0.01" value="0.2">
                             <img src="assets/svg/video/control/fullscreen.svg" alt="fullscreen button" class="fullscreen-button-image">
                         </div>
                     </div>
@@ -263,19 +256,19 @@
                                     <p class="amount-title">Amount</p>
                                     <p class="amount-subtitle">Basic 18+</p>
                                     <div class="amount-counter amount-counter-basic">
-                                        <div class="counter-minus">–</div>
-                                        <p class="counter-number">1</p>
-                                        <div class="counter-plus">+</div>
+                                        <div class="counter-minus counter-minus-basic">–</div>
+                                        <p class="counter-number counter-number-basic">0</p>
+                                        <div class="counter-plus counter-plus-basic">+</div>
                                     </div>
                                     <p class="amount-subtitle">Senior 65+</p>
                                     <div class="amount-counter amount-counter-senior">
-                                        <div class="counter-minus">–</div>
-                                        <p class="counter-number">1</p>
-                                        <div class="counter-plus">+</div>
+                                        <div class="counter-minus counter-minus-senior">–</div>
+                                        <p class="counter-number counter-number-senior">0</p>
+                                        <div class="counter-plus counter-plus-senior">+</div>
                                     </div>
                                     <div class="amount-result">
                                         <p class="amount-title-2">Total €</p>
-                                        <p class="amount-title-2">220</p>
+                                        <p class="amount-title-2 amount-title-num" id="popa">0</p>
                                     </div>
                                 </div>
                             <div class="tickets-buy-button">
@@ -316,20 +309,12 @@
                 <span class="header-logo-title footer-nav-title">LOUVRE</span>
                 </div>
                 <div class="footer-navigation">
-                    <div class="footer-first-column">
-                        <ul class="footer-list">
-                            <li class="footer-item"><a href="#visiting" class="nav-link">Visiting</a></li>
-                            <li class="footer-item"><a href="#explore" class="nav-link">Explore</a></li>
-                            <li class="footer-item"><a href="#video" class="nav-link">Video</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-second-column">
-                        <ul class="footer-list">
-                            <li class="footer-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-                            <li class="footer-item"><a href="#tickets" class="nav-link">Tickets</a></li>
-                            <li class="footer-item"><a href="#contacts" class="nav-link">Contacts</a></li>
-                        </ul>
-                    </div>
+                    <a href="#visiting" class="footer-link">Visiting</a>
+                    <a href="#explore" class="footer-link">Explore</a>
+                    <a href="#video" class="footer-link footer-special-1">Video</a>
+                    <a href="#gallery" class="footer-link footer-special-2">Gallery</a>
+                    <a href="#tickets" class="footer-link">Tickets</a>
+                    <a href="#contacts" class="footer-link">Contacts</a>
                 </div>
                 <div class="footer-socials">
                     <div class="footer-socials-image-container">
@@ -354,11 +339,12 @@
             </div>
             <div class="footer-last_string">
                 <p class="footer-last-paragraph">© 2021</p>
-                <p class="footer-last-paragraph" style="margin-left: 57px;">The Rolling Scopes School</p>
+                <p class="footer-last-paragraph rolling-scopes">The Rolling Scopes School</p>
                 <p class="footer-last-paragraph">LiMoNtEpro</p>
             </div>
         </div>
             
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

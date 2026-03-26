@@ -150,6 +150,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .minus{
     width: 10px;
@@ -177,6 +178,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .plus{
     width: 10px;
