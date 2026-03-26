@@ -1,8 +1,12 @@
+
 //welcome
+//welcome variables
 const slideContainer = document.querySelector('.welcome-slider-container')
 const slideTrack = document.querySelector('.welcome-slider-track')
 const slideArrowLeft = document.querySelector('.slider-arrow-left')
 const slideArrowRight = document.querySelector('.slider-arrow-right')
+
+//welcome functions
 function getSlides(){
     return [...document.querySelectorAll('.welcome-image')]
 }
@@ -55,12 +59,6 @@ function scrollToNext(){
 function scrollToPrev(){
     scrollByAmount(getPrevSlideWidth())
 }
-slideArrowRight.addEventListener('click', ()=>{
-    scrollToNext();
-})
-slideArrowLeft.addEventListener('click', ()=>{
-    scrollToPrev()
-})
 function InfLoop(){
     const lastCloneSlide = getSlides()[getSlides().length-1]
     const firstCloneSlide = getSlides()[0]
@@ -73,10 +71,6 @@ function InfLoop(){
         slideTrack.scrollTo({left: firstRealSlide.offsetLeft,behavior:'instant'})
     }
 }
-slideTrack.addEventListener('scroll', (event)=>{
-    setTimeout(InfLoop,1000);
-    changeBlockAndNum()
-})
 function changeBlockAndNum (){
     //blocks
     const blocks = [...document.querySelectorAll('.carousel-block')]
@@ -98,6 +92,18 @@ function changeBlockAndNum (){
         num.textContent = (`0${currentSlide+1}`)
     }
 }
+// welcome events
+slideArrowRight.addEventListener('click', ()=>{
+    scrollToNext();
+})
+slideArrowLeft.addEventListener('click', ()=>{
+    scrollToPrev()
+})
+slideTrack.addEventListener('scroll', (event)=>{
+    setTimeout(InfLoop,1000);
+    changeBlockAndNum()
+})
+
 //mouse scroll
 let isPressed = false
 let isMovingRight = false
@@ -126,7 +132,10 @@ slideTrack.addEventListener('mousemove', (event)=>{
     console.log(slideTrack.scrollLeft)
     InfLoop();
 })
+
+
 //tickets
+//tickets variables
 const ticketsBasicNum = document.querySelector('.counter-number-basic')
 const ticketsBasicAdjust = document.querySelector('.counter-plus-basic')
 const ticketsBasicReduce = document.querySelector('.counter-minus-basic')
@@ -136,6 +145,8 @@ const ticketsSeniorReduce = document.querySelector('.counter-minus-senior')
 const totalAmount = document.querySelector('.amount-title-num')
 let b=0, s=0, a=0;
 const bp = 120, sp = 100
+
+// tickets events
 ticketsBasicAdjust.addEventListener('click', (event) =>{
     // console.log(event)
     b++
@@ -166,5 +177,64 @@ ticketsSeniorReduce.addEventListener('click', (event) =>{
     totalAmount.innerHTML = a
 })
 
+//Video control
+// video variables
+const video = document.querySelector('.video-player')
+const progress = document.querySelector('.video-bar')
+const progressFilled = document.querySelector('.video-bar-red')
+const toggle = document.querySelector('.play-button-image')
+const playButton = document.querySelector('.video-pause')
+const fullscreen = document.querySelector('.fullscreen-button-image')
+const volumeRange = document.querySelector('.video-volume-range')
+
+
+// video functions
+function togglePlay(){
+    const method = video.paused ? 'play' : 'pause'
+    video[method]();
+}
+function updateButton(){
+    if(this.paused){
+        toggle.src = 'assets/svg/video/control/play.svg'
+        playButton.style.display = 'block'
+    }else{
+        toggle.src = 'assets/svg/video/control/pause.svg'
+        playButton.style.display = 'none'
+    }
+}
+function handleRangeUpdate(){
+    video[this.name] = this.value
+}
+volumeRange.oninput = function(){
+    this.style.background = `linear-gradient(to right, red ${this.value*100}%, #C4C4C4 ${this.value*100}%`
+}
+function handleProgress(){
+    const percent = (video.currentTime / video.duration) * 100
+    progressFilled.style.width = `${percent}%`
+}
+function scrub (e){
+    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration
+    video.currentTime = scrubTime
+}
+
+// video events
+video.addEventListener('click', togglePlay)
+video.addEventListener('play', updateButton)
+video.addEventListener('pause', updateButton)
+video.addEventListener('timeupdate', handleProgress)
+toggle.addEventListener('click', togglePlay)
+playButton.addEventListener('click', togglePlay)
+volumeRange.addEventListener('change', handleRangeUpdate)
+volumeRange.addEventListener('mousemove', handleRangeUpdate)
+let mousedown=false
+progress.addEventListener('click', scrub)
+progress.addEventListener('mousemove', (e)=>{mousedown && scrub(e)})
+progress.addEventListener('mousedown', ()=>{mousedown=true})
+progress.addEventListener('mouseup', ()=>{mousedown=false})
+fullscreen.addEventListener('click', ()=>{
+    if(video.requestFullscreen()){
+        video.requestFullscreen()
+    }
+})
 
 
