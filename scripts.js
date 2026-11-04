@@ -133,6 +133,34 @@ slideTrack.addEventListener('mousemove', (event)=>{
     InfLoop();
 })
 
+//explore
+//explore variables
+const scrollLine = document.querySelector('.explore-slider-line')
+const imageBefore = document.querySelector('.explore-image-container-before')
+const imageContainer = document.querySelector('.explore-slider')
+let scrollActive = false 
+//explore fucntions
+function scrollMove (e){
+    console.log(startXX)
+    let newX= e.clientX - startXX - imageContainer.getBoundingClientRect().left + scrollLine.offsetWidth/2
+        if(newX >= 0 && newX<= imageContainer.offsetWidth){
+            scrollLine.style.left = newX + "px"
+            imageBefore.style.width = newX + "px"
+        }
+}
+//explore events
+scrollLine.addEventListener('mousedown', (e)=>{
+    e.preventDefault()
+    scrollActive = true
+    startXX = e.clientX - scrollLine.getBoundingClientRect().left
+    scrollLine.style.cursor = 'grabbing'
+    scrollLine.addEventListener('mousemove', scrollMove)
+})
+scrollLine.addEventListener('mouseup', ()=>{
+    scrollLine.removeEventListener('mousemove', scrollMove)
+    scrollLine.style.cursor = 'grab'
+    scrollActive = false
+})
 
 //tickets
 //tickets variables
